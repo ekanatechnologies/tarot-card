@@ -1,0 +1,584 @@
+/* User Profile */
+
+.edit-profile-2-availabity-left{
+width: 100%;
+height: 50px;
+}
+.edi-profile-availabity-card-1 {
+    width: 228px;
+height: 200px;
+    border: none;
+    align-items: center;
+    text-align: center;
+
+}
+
+.edit-p-img{
+    width: 228.59px;
+    height: 200px;
+
+
+}
+.user-profile-page-2 {
+    width: 1200px;
+    height: 658px;
+
+
+    margin: 60px auto;
+
+}
+
+.user-profile-righ {
+    width: 200px;
+    height: 200px;
+    transform: rotate(-51 deg);
+
+}
+
+.user-profile-availabity-1 {
+    width: 250px;
+    height: 500px;
+    background: #ffffff;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    border: none;
+    border-radius: 10px;
+}
+
+.user-profile-header {
+    height: 500px;
+    width: 100%;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    border: none;
+    border-radius: 10px;
+}
+
+.user-profile-availabity-card-1 {
+    width: 230px;
+    height: 330px;
+
+    border: none;
+    align-items: center;
+    text-align: center;
+
+}
+
+.user-profile-availabity-card-2 {
+    width: 230px;
+    height: 330px;
+
+    border: none;
+    align-items: center;
+    text-align: center;
+    background-image: url(../../images/main/user-profile-right-bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.user-profile-wallet {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2px;
+    width: 210px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0.5px solid #000;
+    margin-right: 20px;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+.user-profile-wallet-amount {
+  font-family:'Lato', sans-serif ;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
+}
+
+.edit-profil-ti p {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.edit-profile-btn {
+    width: 120px;
+    height: 32px;
+    margin: auto;
+    background: linear-gradient(137.08deg, #3F8DF3 4.92%, #C3A3EE 115.47%);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+
+}
+
+.edit-profile-btn p {
+    color: #fff;
+  font-family:'Lato', sans-serif ;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 10px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 20px;
+
+}
+
+.edit-profile-btn-1 {
+    width: 120px;
+    height: 32px;
+    margin: auto;
+    background: linear-gradient(137.08deg, #3F8DF3 4.92%, #C3A3EE 115.47%);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 50px;
+
+}
+
+.edit-profile-btn-1 p {
+    color: #fff;
+  font-family:'Lato', sans-serif ;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 10px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 20px;
+
+}
+
+
+
+/* chat history */
+
+
+.chat-history-header {
+    height: 650px;
+    width: 940px;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    border: none;
+    border-radius: 10px;
+}
+
+.chat-history-availabity {
+    height: 650px;
+}
+
+.chat-history-card-1 {
+    width: 280px;
+    height: 250px;
+    border: none;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    margin-top: 20px;
+
+
+}
+
+.history-header-edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-header-left {
+    width: 50px;
+    height: 50px;
+}
+
+.history-header-right {
+    width: 180px;
+    height: 70px;
+}
+
+.history-heade-title-1 {
+  font-family:'Lato', sans-serif ;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 5px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 5px;
+
+}
+
+.history-heade-title-2 {
+  font-family:'Lato', sans-serif ;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 5px;
+
+
+}
+
+.chat-history-middle-left {
+    width: 150px;
+    height: 46px;
+
+
+}
+
+.chat-history-middle-left p {
+  font-family:'Lato', sans-serif ;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 4px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-top: 4px;
+
+}
+
+.chat-history-middle-right {
+    width: 80px;
+    height: 46px;
+
+}
+
+.chat-history-middle-right p {
+  font-family:'Lato', sans-serif ;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 4px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.chat-history-middle-right .p-1 {
+  font-family:'Lato', sans-serif ;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 5px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.history-footer-time-icon {
+    width: 20px;
+    height: 20px;
+
+
+}
+
+.history-footer-time {
+  font-family:'Lato', sans-serif ;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px
+}
+
+.history-card-btn {
+    width: 150px;
+    height: 36px;
+    background: linear-gradient(137.08deg, #3F8DF3 4.92%, #C3A3EE 115.47%);
+    color: #FFFBEE;
+  font-family:'Lato', sans-serif ;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 10px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-top: 12px;
+    border-radius: 5px;
+    border: none;
+    display: inline-grid;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.4s;
+
+}
+
+.icon-buton{
+    display:inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent;
+
+}
+
+/* Refund Raise page css */
+
+.refund-raise-availabity {
+    height: 520px;
+}
+
+.refund-raise-header {
+    height: 520px;
+    width: 940px;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    border: none;
+    border-radius: 10px;
+}
+
+.refund-raise-card-1 {
+    width: 280px;
+    height: 180px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    margin-top: 20px;
+
+
+}
+
+.refund-raise-middle-right {
+    width: 50px;
+    height: 60px;
+    background: #3F8DF3;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.refund-raise-middle-right p {
+  font-family:'Lato', sans-serif ;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 4px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.refund-raise-middle-right .p-1 {
+  font-family:'Lato', sans-serif ;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 5px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 4px;
+}
+
+
+/* Credit History */
+
+.credit-history-availabity {
+    height: 500px;
+}
+
+.credit-history-header {
+    height: 500px;
+    width: 960px;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    border: none;
+    border-radius: 10px;
+}
+
+.credit-history-card-1 {
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    background: #FAFAFA;
+    border: none;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    margin-top: 20px;
+    border-left: 2mm ridge rgba(102, 111, 238, 0.4);
+
+
+
+}
+
+.credit-history-middle-left {
+    width: 80px;
+    height: 60px;
+    color: #070707;
+
+    border-radius: 10px;
+}
+
+.credit-history-middle-left p {
+  font-family:'Lato', sans-serif ;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 4px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.credit-history-middle-left .p-2 {
+  font-family:'Lato', sans-serif ;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 10px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #219951;
+
+}
+
+
+.credit-history-middle-right {
+    width: 50px;
+    height: 60px;
+    background: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.credit-history-middle-right p {
+  font-family:'Lato', sans-serif ;
+   
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 4px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+.credit-history-middle-right .p-1 {
+  font-family:'Lato', sans-serif ;
+    font-size:18px;
+    font-weight: 700;
+    line-height: 5px;
+    letter-spacing: 0em;
+    text-align: center;
+    
+
+}
+
+
+
+/* Responsive */
+
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+    .main{
+        width: 100% !important;
+
+    }
+    .user-profile-page-2 {
+        width: 98%;
+        height: 100%;
+        margin: 60px auto;
+        background: #ffffff;
+    
+    }
+    
+    .user-profile-availabity-1 {
+        width: 250px;
+        height: 500px;
+        background: #ffffff;
+        box-shadow: 0px 8px 24px 0px #00000026;
+        border: none;
+        border-radius: 10px;
+        margin: auto !important;
+    }
+    
+.user-profile-header {
+    
+    width: 100%;
+    height: 100vh;
+    background: #a71f1f;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    border: none;
+    border-radius: 10px;
+}
+
+.user-profile-availabity-card-2 {
+    width: 230px;
+    height: 100%;
+
+    border: none;
+    align-items: center;
+    text-align: center;
+    background-image: url(../../images/main/user-profile-right-bg.png);
+    background-position: center;
+    background-size: cover;
+    background: #ffffff;
+}
+
+.user-profile-wallet {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2px;
+    width: 210px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0.5px solid #000;
+    margin-right: 20px;
+    margin: auto;
+    margin-top:10px;
+
+}
+
+.user-profile-wallet-amount {
+  font-family:'Lato', sans-serif ;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
+}
+.user-profile-header {
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* Refund-Raise */
+.refund-raise-header {
+    height:100%;
+    width: 100%;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+  
+}
+/* credit-history */
+.credit-history-header {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    border: none;
+    border-radius: 10px;
+}
+/* chat history */
+
+
+.chat-history-header {
+    height: 100%;
+    width: 100%;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    border: none;
+    border-radius: 10px;
+}
+.chat-history-availabity {
+    height: 100%;
+}
+}
