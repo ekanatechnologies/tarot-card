@@ -9,7 +9,7 @@
             <div class="profile">
                 <div class="profile-image">
                     <img
-                        @if($data->user_data->media->where('reference','profile_picture')->first())
+                        @if(isset($data->user_data) && $data->user_data->media->where('reference','profile_picture')->first())
                             src="{{asset($data->user_data->media->where('reference','profile_picture')->first()->path)}}"
                         @else
                             src="https://cdn-icons-png.flaticon.com/128/1144/1144709.png"
@@ -17,8 +17,8 @@
                         class="img-thumbnail">
                 </div>
                 <h3 class="profile-name">{{auth()->user()->name}}</h3>
-                <h6>Exp : {{$data->experience}} Years</h6>
-                <h6>{{implode(',',json_decode($data->languages))}}</h6>
+                <h6>Exp : {{isset($data->user_data)? $data->experience:'---'}} Years</h6>
+                <h6>{{isset($data->user_data)? implode(',',json_decode($data->languages)):'---'}}</h6>
                 <a href="{{route('consultant.profile-edit-page')}}" class="schedule-btn btn">Edit Profile <i class="fa-solid fa-pencil ml-2"></i></a>
             </div>
             <div class="section-reviews">
@@ -106,7 +106,7 @@
                 <div class="col my-services">
                     <h2>About My Services</h2>
                     <hr style="width: 100%; height: 1px; opacity: 1; color: #C5C5C5;"/>
-                    <p>{{$data->about}}</p>
+                    <p>{{ isset($data->user_data)? $data->about:'---'}}</p>
 
 
                 </div>
@@ -115,14 +115,17 @@
                         <h2>Specialization</h2>
                         <hr style="width: 100%; height: 1px; opacity: 1; color: #C5C5C5;"/>
                         <div class="specialization-content">
-                            @foreach(json_decode($data->specialization) as $value)
-                                <div>{{$value}}</div>
-                            @endforeach
+                            @if(isset($data->user_data))
+                                @foreach(json_decode($data->specialization) as $value)
+                                    <div>{{$value}}</div>
+                                @endforeach
+                            @endif
+
                         </div>
                     </div>
                     <div class="exprience-qualification">
                         <h2>Experience & Qualification</h2>
-                        <p>{{$data->qualification}}</p>
+                        <p>{{isset($data->user_data)? $data->qualification:'--'}}</p>
                     </div>
                 </div>
             </div>

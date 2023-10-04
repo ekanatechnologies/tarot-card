@@ -19,7 +19,7 @@
                                         <div class="col">
                                             <center>
                                                 <img
-                                                    @if($data->user_data->media->where('reference','profile_picture')->first())
+                                                    @if(isset($data->user_data) && $data->user_data->media->where('reference','profile_picture')->first())
                                                         src="{{asset($data->user_data->media->where('reference','profile_picture')->first()->path)}}"
                                                     @else
                                                         src="https://cdn-icons-png.flaticon.com/128/1144/1144709.png"
@@ -56,7 +56,7 @@
                                         <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                                             <div class="form-group">
                                                 <label for="field_experience">Experience</label>
-                                                <input type="number" name="field_experience" class="form-control @error('field_experience') is-invalid @enderror" id="field_experience" placeholder="Years of experience" value="{{$data->experience}}">
+                                                <input type="number" name="field_experience" class="form-control @error('field_experience') is-invalid @enderror" id="field_experience" placeholder="Years of experience" value="{{isset($data->experience)?$data->experience:null}}">
                                                 <small class="">Years of experience</small>
                                                 @error('field_experience')
                                                 <div class="invalid-feedback">{{$message}}</div>
@@ -88,7 +88,7 @@
                                         <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                                             <div class="form-group">
                                                 <label for="field_tags">Specializations</label>
-                                                <input value="{{$data->specialization}}" type="text" name="field_tags" class="tags form-control @error('field_tags') is-invalid @enderror" id="field_tags" placeholder="Specialization tags">
+                                                <input value="{{(isset($data->specialization)?$data->specialization:null)}}" type="text" name="field_tags" class="tags form-control @error('field_tags') is-invalid @enderror" id="field_tags" placeholder="Specialization tags">
                                                 <small class="">Type and press enter</small>
                                                 @error('field_tags')
                                                 <div class="invalid-feedback">{{$message}}</div>
@@ -98,7 +98,7 @@
                                         <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                                             <div class="form-group">
                                                 <label for="field_languages">Languages</label>
-                                                <input value="{{$data->languages}}" type="text" name="field_languages" class="tags form-control @error('field_languages') is-invalid @enderror" id="field_languages" placeholder="Specialization tags">
+                                                <input value="{{isset($data->languages)?$data->languages:null}}" type="text" name="field_languages" class="tags form-control @error('field_languages') is-invalid @enderror" id="field_languages" placeholder="Specialization tags">
                                                 <small class="">Languages</small>
                                                 @error('field_languages')
                                                 <div class="invalid-feedback">{{$message}}</div>
@@ -108,7 +108,7 @@
                                         <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                                             <div class="form-group">
                                                 <label for="field_vid_consult_charge">Video Call Charges</label>
-                                                <input value="{{$data->vid_consult_charge/60}}" type="number" min="0" name="field_vid_consult_charge" class="tags form-control @error('field_vid_consult_charge') is-invalid @enderror" id="field_vid_consult_charge" placeholder="Specialization">
+                                                <input value="{{isset($data->vid_consult_charge)? $data->vid_consult_charge/60:null}}" type="number" min="0" name="field_vid_consult_charge" class="tags form-control @error('field_vid_consult_charge') is-invalid @enderror" id="field_vid_consult_charge" placeholder="Specialization">
                                                 <small class="">Per Minute Video Call Charge</small>
                                                 @error('field_vid_consult_charge')
                                                 <div class="invalid-feedback">{{$message}}</div>

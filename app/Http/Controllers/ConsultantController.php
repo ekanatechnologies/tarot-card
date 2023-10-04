@@ -34,12 +34,32 @@ class ConsultantController extends Controller
             'field_about'=>'',
             'field_qualification'=>'',
             'field_vid_consult_charge'=>'required|integer|gt:0',
-            'field_tags'=>'',
+            'field_tags'=>'required',
+            'field_languages'=>'required',
         ];
         if ($request->hasFile('field_image')){
             $validationRules['field_image']='file|mimes:bpm,jpg,jpeg,png,webp';
         }
         $request->validate($validationRules);
+
+        if ($request->hasFile('field_image')){
+            $imgInDb=File::where(['additional'=>'profile_picture_consultant','reference_id'=>auth()->user()->id])->first();
+            if(!$imgInDb){
+                $image=new File();
+            } else{
+                Storage::disk('my_public')->delete($imgInDb->path);
+                $image=$imgInDb;
+            }
+            $image->path=Storage::disk('my_public')->put('images', $request->field_image);
+            $image->reference='profile_picture';
+            $image->reference_id=auth()->user()->id;
+            $image->additional='profile_picture_consultant';
+            $image->created_by=auth()->user()->id;
+            if(!$image->save()) {
+                return redirect()->back()->withErrors('Unable to save the image');
+            }
+        }
+
         $inDb=ConsultantInfo::where(['user_id'=>auth()->user()->id])->first();
         if(!$inDb){
             $info=new ConsultantInfo();
@@ -61,21 +81,10 @@ class ConsultantController extends Controller
         $info->about=$request->field_about;
         $info->qualification=$request->field_qualification;
         $info->vid_consult_charge=(float)$request->field_vid_consult_charge*60;
-        $info->specialization=array_column(json_decode($request->field_tags),'value');
-        $info->languages=array_column(json_decode($request->field_languages),'value');
+        $info->specialization=json_encode(array_column(json_decode($request->field_tags),'value'));
+        $info->languages=json_encode(array_column(json_decode($request->field_languages),'value'));
         if(!$info->save()) {
             return redirect()->back()->withErrors('Unable to perform this action');
-        }
-        if ($request->hasFile('field_image')){
-            $image=new File();
-            $image->path=Storage::disk('my_public')->put('images', $request->field_image);
-            $image->reference='profile_picture';
-            $image->reference_id=$info->id;
-            $image->additional='profile_picture_consultant';
-            $image->created_by=auth()->user()->id;
-            if(!$image->save()) {
-                return redirect()->back()->withErrors('Unable to save the image');
-            }
         }
         if ($userToBeUpdated){
             $user=User::find(auth()->user()->id);
@@ -88,7 +97,7 @@ class ConsultantController extends Controller
 
     function listPage()
     {
-        $consultants=User::role('consultant')->with('consultant_info')->paginate(15);
+        $consultants=User::role('consultant')->with('consultant_info')->get();
         return view('general.consultant.consultant-list',['consultants'=>$consultants]);
     }
 }
